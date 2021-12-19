@@ -1,0 +1,24 @@
+{
+    "name": "checkout-server",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "serve": "nodemon server.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/valivali/checkout.git"
+    },
+    "author": "Vali",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/valivali/checkout/issues"
+    },
+    "homepage": "https://github.com/valivali/checkout#readme",
+    "dependencies": {
+        "cors": "^2.8.5",
+        "express": "^4.17.2",
+        "nodemon": "^2.0.15"
+    }
+}

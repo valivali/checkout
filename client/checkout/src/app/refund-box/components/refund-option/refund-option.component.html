@@ -1,0 +1,23 @@
+<div class="refund-option-box">
+    <input type="radio" id="{{'ro-'+index}}" name="{{groupName}}" [checked]="calculatedRefund.selected" (click)="selectOption()" />
+    <label for="{{'ro-'+index}}">
+        <div class="top-view">
+            <div class="icon">
+                <fa-icon [icon]="calculatedRefund.icon"></fa-icon>
+            </div>
+            <div class="content">
+                <div class="title">
+                    <div class="text">{{calculatedRefund?.name}}</div>
+                    <div class="badge" *ngIf="calculatedRefund.isPopular || calculatedRefund.isBestValue">
+                        {{calculatedRefund.isPopular ? 'POPULAR' : 'BEST VALUE'}}
+                    </div>
+                </div>
+                <div class="subtitle">{{calculatedRefund?.subtitle}}</div>
+            </div>
+            <div class="price">
+                <span>{{calculatedRefund?.price | currency: calculatedRefund?.currency}}</span>
+            </div>
+        </div>
+        <div class="additional-info">{{calculatedRefund?.description}}</div>
+    </label>
+</div>

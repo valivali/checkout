@@ -1,0 +1,23 @@
+<div class="refund-box-container">
+    <div class="title">Select your refund option</div>
+    <div class="content">
+        <div class="refund-options-container">
+            <div *ngFor="let refund of refundOptions; index as i;">
+                <app-refund-option
+                    [groupName]="'refundOptions'"
+                    [refund]="refund"
+                    [purchase]="purchase"
+                    [index]="i"
+                    [selected]="selectedRefund"
+                    (selectedOption)="markSelected($event)"
+                >
+                </app-refund-option>
+            </div>
+        </div>
+        <app-selected-summary
+            [purchase]="purchase"
+            [selectedRefund]="selectedRefund"
+        >
+        </app-selected-summary>
+    </div>
+</div>

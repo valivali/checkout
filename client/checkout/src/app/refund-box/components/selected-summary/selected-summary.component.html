@@ -1,0 +1,19 @@
+<div class="selected-summary-container">
+    <div class="summary-item-group">
+        <div class="summary-item">
+            <span class="text">Original Refund</span>
+            <span class="price">{{purchase.totalAmount | currency: purchase.currency}}</span>
+        </div>
+        <div class="summary-item">
+            <span class="text">{{chosenRefund.name.indexOf('Donation') > -1 ? 'Donated amount' : (chosenRefund.bonus ? 'Bonus' : 'Fee')}}</span>
+            <span class="price" [ngClass]="chosenRefund.fee ? 'negative' : 'positive'">
+                {{additionalAdjustment | currency: purchase.currency}}
+            </span>
+        </div>
+        <div class="summary-item">
+            <span class="text">Total Refund</span>
+            <span class="price"><b>{{calculatedTotalPrice | currency: purchase.currency}}</b></span>
+        </div>
+    </div>
+    <button type="button" (click)="submitRefundRequest()">Select {{chosenRefund.name}}</button>
+</div>

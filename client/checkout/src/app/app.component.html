@@ -1,0 +1,11 @@
+<div class="checkout-main">
+  
+  <div class="title">
+    <span>Headphones</span> 
+    <fa-icon [icon]="headPhonesIcon"></fa-icon>
+  </div>
+
+  <ng-container *ngIf="!!refundOptionList">
+    <app-refund-box [refundOptions]="refundOptionList" [purchase]="purchaseToRefund"></app-refund-box>
+  </ng-container>
+</div>
